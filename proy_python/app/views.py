@@ -1,19 +1,20 @@
-from django.shortcuts import render
+# views.py
+from django.shortcuts import render  # Asegúrate de importar render
 
-# Create your views here.
-from django.http import HttpResponse
+def index(request):
+    return render(request, "app/index.html")
 
 def inicio(request):
-    return HttpResponse("Vista inicio")
+    return render(request, "app/inicio.html")
 
-def cursos(request):
-    return HttpResponse("Vista cursos")
+def nuestra_historia(request):
+    return render(request, "app/nuestra_historia.html")
 
-def profesores(request):
-    return HttpResponse("Vista profesores")
+def nosotros(request):
+    return render(request, "app/nosotros.html")
 
-def estudiantes(request):
-    return HttpResponse("Vista estudiantes")
+def productos(request):
+    return render(request, "app/productos.html")
 
-def entregables(request):
-    return HttpResponse("Vista entregables")
+def contactos(request):
+    return render(request, "app/contactos.html")
