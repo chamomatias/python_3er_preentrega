@@ -1,0 +1,66 @@
+{% extends "app/BASE.html" %} 
+
+{% load static %}
+
+{% block main%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Trabaja con Nosotros -->
+    <section class="page-section" id="trabaja">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Trabaja con nosotros</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Déjanos tu información para que podamos contactarte.</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <form id="jobApplicationForm" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <!-- Nombre completo -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Ingresa tu nombre completo..." required />
+                            <label for="name">Nombre completo</label>
+                            <div class="invalid-feedback">El nombre es obligatorio.</div>
+                        </div>
+                        <!-- Correo electrónico -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" name="email" type="email" placeholder="correo@example.com" required />
+                            <label for="email">Correo electrónico</label>
+                            <div class="invalid-feedback">El correo es obligatorio.</div>
+                            <div class="invalid-feedback">Correo no válido.</div>
+                        </div>
+                        <!-- Teléfono -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
+                            <label for="phone">Teléfono</label>
+                            <div class="invalid-feedback">El teléfono es obligatorio.</div>
+                        </div>
+                        <!-- Adjuntar CV -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="cv" name="cv" type="file" accept=".pdf,.doc,.docx" required />
+                            <label for="cv">Adjuntar CV</label>
+                            <div class="invalid-feedback">Es obligatorio adjuntar tu CV.</div>
+                        </div>
+                        <!-- Botón de enviar -->
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+{% endblock main%}

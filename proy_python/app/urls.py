@@ -10,7 +10,8 @@ urlpatterns = [
 ]
 
 form_html = [
-    path('form_Contactos/', views.form_Contactos, name="form_Contactos")
+    path('form_Contactos/', views.form_Contactos, name="form_Contactos"),
+    path('form_Rrhh/', views.form_Rrhh, name='form_Rrhh'),
 ]
 
 urlpatterns += form_html

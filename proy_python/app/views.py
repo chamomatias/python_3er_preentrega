@@ -17,15 +17,9 @@ def nosotros(request):
 def productos(request):
     return render(request, "app/productos.html")
 
+def form_Rrhh(request):
+    return render(request, 'app/form_Rrhh.html')
+
+
 def form_Contactos(request):
-    if  request.method == "POST":
-        nombre_completo = request.POST["nombre_completo"]
-        correo_electronico = request.POST["correo_electronico"]
-        telefono = request.POST["telefono"]
-        escribrenos = request.POST["escribrenos"]
-
-        contacto = form_Contactos(nombre_completo=nombre_completo, correo_electronico=correo_electronico, telefono=telefono, escribrenos=escribrenos)
-        contacto.save()
-        return render(request, "app/form_Contactos.html", {"mensaje": "Contacto guardado correctamente"})
-
-    return render(request, "app/form_Contactos.html")
+    return render(request, 'app/form_Contactos.html')

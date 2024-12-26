@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import unidad_de_negocio, producto, cliente, form_Contactos
+from app.models import unidad_de_negocio, producto, cliente, form_Contactos, form_Rrhh  
 
 # Register your models here.
 @admin.register(unidad_de_negocio)
@@ -26,4 +26,11 @@ class clienteAdmin(admin.ModelAdmin):
 @admin.register(form_Contactos)
 class form_ContactosAdmin(admin.ModelAdmin):
     list_display = ["id", "nombre_completo", "correo_electronico", "telefono", "escribrenos"]
+    search_fields = ["nombre_completo", "correo_electronico"]
+
+
+
+@admin.register(form_Rrhh)
+class form_RrhhAdmin(admin.ModelAdmin):
+    list_display = ["nombre_completo", "correo_electronico", "telefono"]
     search_fields = ["nombre_completo", "correo_electronico"]

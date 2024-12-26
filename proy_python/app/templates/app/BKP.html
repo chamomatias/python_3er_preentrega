@@ -196,7 +196,7 @@ Hoy, con más de 50 años de trayectoria, Diaser sigue siendo una empresa famili
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Contactanos!</h2>
+                        <h2 class="mt-0">Contactanos para asesorate</h2>
                         <hr class="divider" />
                         <p class="text-muted mb-5">Envianos tu CV</p>
                     </div>
@@ -266,6 +266,73 @@ Hoy, con más de 50 años de trayectoria, Diaser sigue siendo una empresa famili
                 </div>
             </div>
         </section>
+
+
+        <!-- Trabaja con Nosotros -->
+<section class="page-section" id="trabaja">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">Trabaja con nosotros</h2>
+                <hr class="divider" />
+                <p class="text-muted mb-5">Déjanos tu información para que podamos contactarte.</p>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+                <form id="jobApplicationForm" enctype="multipart/form-data">
+                    <!-- Nombre completo -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="Ingresa tu nombre completo..." required />
+                        <label for="name">Nombre completo</label>
+                        <div class="invalid-feedback">El nombre es obligatorio.</div>
+                    </div>
+                    <!-- Correo electrónico -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="correo@example.com" required />
+                        <label for="email">Correo electrónico</label>
+                        <div class="invalid-feedback">El correo es obligatorio.</div>
+                        <div class="invalid-feedback">Correo no válido.</div>
+                    </div>
+                    <!-- Teléfono -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" required />
+                        <label for="phone">Teléfono</label>
+                        <div class="invalid-feedback">El teléfono es obligatorio.</div>
+                    </div>
+                    <!-- Adjuntar CV -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="cv" type="file" accept=".pdf,.doc,.docx" required />
+                        <label for="cv">Adjuntar CV</label>
+                        <div class="invalid-feedback">Es obligatorio adjuntar tu CV.</div>
+                    </div>
+                    <!-- Mensaje de éxito -->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">¡Formulario enviado exitosamente!</div>
+                            Gracias por postularte. Nos pondremos en contacto contigo pronto.
+                        </div>
+                    </div>
+                    <!-- Mensaje de error -->
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error al enviar el formulario.</div>
+                    </div>
+                    <!-- Botón de enviar -->
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                <div>+1 (555) 123-4567</div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
