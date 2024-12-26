@@ -18,3 +18,11 @@ class cliente(models.Model):
     unidad_de_negocio = models.CharField(max_length=20)
     def __str__(self):
         return f"{self.id} | {self.nombre} | {self.unidad_de_negocio}"
+
+class Contactos(models.Model):
+    nombre_completo = models.CharField(max_length=40)
+    correo_electronico = models.CharField(max_length=40)
+    telefono = models.CharField(max_length=40)
+    escribrenos = models.CharField(max_length=400)   
+    def __str__(self):
+        return f"{self.id} | {self.nombre_completo} | {self.correo_electronico} | {self.telefono} | {self.escribrenos}"
